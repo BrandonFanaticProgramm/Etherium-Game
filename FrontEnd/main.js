@@ -642,6 +642,10 @@ imagenAtacar1.addEventListener("mouseenter", function() {
   informacionHabilidad.style.display = 'block'
 });
 
+imagenAtacar1.addEventListener("mouseleave",() => {
+  informacionHabilidad.style.display = 'none';
+})
+
 
 imagenHabilidad1.addEventListener("click", function() {
   habilidadSeleccionada = Juego.personajeActual.habilidades[0].nombre;
@@ -695,8 +699,6 @@ imagenHabilidad11.addEventListener("click", function() {
 
 imagenHabilidad11.addEventListener("mouseenter", function() {
   console.log('yef ')
-
-
   // imagenHabilidad11.classList.add('seleccionHabilidad')
   if (Juego.personajeActual.habilidades[1].Espera != 0) {
     cooldownHabilidad11.style.display = 'flex'
